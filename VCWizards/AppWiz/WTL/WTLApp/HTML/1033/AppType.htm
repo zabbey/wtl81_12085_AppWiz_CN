@@ -548,17 +548,6 @@ function OnLang()
 		window.external.AddSymbol("TEMPLATES_PATH", strNewTemplatesPath);
 
 		SetLocaleForResources(strLCID);
-		WTL_USE_UNICODE.checked = IsDBCSCharSet(window.external);
-		OnUnicode();
-	}
-}
-
-function OnUnicode()
-{
-	if (WTL_USE_UNICODE.checked) {
-	    window.external.AddSymbol("WTL_USE_UNICODE", true);
-	} else {
-	    window.external.AddSymbol("WTL_USE_UNICODE", false);
 	}
 }
 
